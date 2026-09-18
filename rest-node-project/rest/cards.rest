@@ -1,0 +1,37 @@
+### Create new Card
+POST http://localhost:3000/api/v1/cards
+Authorization: bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im5Abi5jb20iLCJpc0FkbWluIjp0cnVlLCJleHAiOjE3ODcxNjU4OTEsImlhdCI6MTc4NzE1ODY5MX0.iju-LA24Z5GUJj3xTjJOZaLUcJ6c1Zo3rIO03XuFxsk
+Content-Type: application/json
+
+{
+    "title": "card",
+    "subtitle": "subtitle",
+    "description": "desc",
+    "web": "https://google.com",
+    "address":{
+        "street": "test",
+        "city": "test",
+        "country": "test",
+        "state": "test",
+        "houseNumber": 1111,
+        "zip": "1234522"
+    },
+    "image":{
+        "alt": "user-profile",
+        "url": "https://picsum.photos/200/300"
+    },
+    "phone": "0524720544",
+    "email": "user21@user21.com"
+}
+
+
+### Get all cards
+GET http://localhost:3000/api/v1/cards
+
+
+### Get specific card
+GET http://localhost:3000/api/v1/cards/6a85e5ce89dd386697f6166a
+
+### Get my cards
+GET http://localhost:3000/api/v1/cards/my-cards
+Authorization: bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im5Abi5jb20iLCJpc0FkbWluIjp0cnVlLCJleHAiOjE3ODcxNjgwNTEsImlhdCI6MTc4NzE2MDg1MX0.naEUVG3N2Afxspe6-BxHoYoLWUVu2TMRQVPCHeITaRU

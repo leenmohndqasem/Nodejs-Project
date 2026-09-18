@@ -1,0 +1,63 @@
+### Create/ Add new user
+POST http://localhost:3000/api/v1/users
+Content-Type: application/json
+
+{
+    "name":{
+        "first": "A1",
+        "middle": "",
+        "last": "A1"
+    },
+    "address":{
+        "street": "test1",
+        "city": "test1",
+        "country": "test1",
+        "state": "test1",
+        "houseNumber": 10,
+        "zip": "12345"
+    },
+    "image":{
+        "alt": "user-profile",
+        "url": "https://picsum.photos/200/300"
+    },
+    "phone": "0524720544",
+    "email": "a123@a123.com",
+    "isBusiness": true,
+    "password": "Aa123456!",
+    "isAdmin": true
+}
+
+### Get All Users
+GET http://localhost:3000/api/v1/users
+Authorization: bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im5Abi5jb20iLCJpc0FkbWluIjp0cnVlLCJleHAiOjE3ODY5MDEwODksImlhdCI6MTc4Njg5Mzg4OX0.VdiZMt3YGCxp7wMw1vz4hBBk_3FAdyqknTf91a85BpI
+
+### Login user
+POST http://localhost:3000/api/v1/users/login
+Content-Type: application/json
+
+{
+    "email": "n@n.com",
+    "password": "Aa123456!"
+}
+
+
+### Get user
+GET http://localhost:3000/api/v1/users/6a6f5ae4fe612db35a9ac8ce
+Authorization: bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im5Abi5jb20iLCJpc0FkbWluIjp0cnVlLCJleHAiOjE3ODY1NjE3ODEsImlhdCI6MTc4NjU1NDU4MX0.n90cD2qK2ZCn4yt0nvPXPwQSnKpR6g4YwTP45k9AudA
+
+### Update user
+PUT http://localhost:3000/api/v1/users/6a6f7ce70795f1e521065306
+Authorization: bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im5Abi5jb20iLCJpc0FkbWluIjp0cnVlLCJleHAiOjE3ODY1NjE3ODEsImlhdCI6MTc4NjU1NDU4MX0.n90cD2qK2ZCn4yt0nvPXPwQSnKpR6g4YwTP45k9AudA
+Content-Type: application/json
+
+{
+    "name":{
+        "first": "Ploni",
+        "last": "Almoni"
+    }
+}
+
+
+### Delete user
+DELETE http://localhost:3000/api/v1/users/6a6f74656b791bd7293f025a
+Authorization: bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im5Abi5jb20iLCJpc0FkbWluIjp0cnVlLCJleHAiOjE3ODY5MDEwODksImlhdCI6MTc4Njg5Mzg4OX0.VdiZMt3YGCxp7wMw1vz4hBBk_3FAdyqknTf91a85BpI
